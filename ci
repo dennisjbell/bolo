@@ -74,5 +74,6 @@ make -j${CPUS}
 make -j${CPUS} check
 make           install
 
+set +x
 echo ; echo "##########################################################"
 check_cla
