@@ -18,13 +18,23 @@
   with Bolo.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "bolo.h"
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include <getopt.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <vigor.h>
 
 #include <sys/epoll.h>
 #include <sys/types.h>
+#include <sys/stat.h>
 #include <sys/wait.h>
 
+#include <bolo.h>
+
+#define DEFAULT_AGENT_FILE       "/etc/dbolo.conf"
 #define BOLO_EPOLL_MAXFD         8192
 #define AGENT_TICK_MS              50
 #define AGENT_SOCKET_LIFETIME_MS 7000

@@ -88,5 +88,5 @@ else
 	AC_DEFINE([HAVE_PCRE_FREE_STUDY], 0, [PCRE library exports pcre_free_study()])
 fi
 
-AC_CONFIG_FILES([Makefile rpm.spec])
+AC_CONFIG_FILES([Makefile rpm.spec include/bolo.h])
 AC_OUTPUT
